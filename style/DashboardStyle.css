@@ -1,0 +1,5 @@
+.right-screen{
+    background-color: red;
+    width: calc(100% - 150px);
+    height:100vh;
+}

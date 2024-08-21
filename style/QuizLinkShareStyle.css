@@ -1,0 +1,38 @@
+.popup-close-button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .share-link-text{
+    font-size:18px;
+    color: #444;
+    background-color: #EDEDED;
+    padding:10px;
+    border-radius: 10px;
+    width:90%;
+   
+  }
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  #quiz-share-link-popup-container{
+height:200px;
+  }
+
+  }
+  @media screen and (max-width: 480px) {
+    #quiz-share-link-popup-container{
+  height:200px;
+  width:200px;
+    }
+    #quiz-share-link-popup-title{
+      font-size: 20px;
+    }
+    .share-link-text{
+      font-size: 14px;
+      width: 100%;
+    }
+    }

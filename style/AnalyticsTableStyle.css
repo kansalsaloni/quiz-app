@@ -1,0 +1,84 @@
+.analytic-quiz-table {
+    width: calc(100% - 150px); /* Adjusted width calculation */
+    border-collapse: separate; 
+    border-spacing: 0;
+    margin: 50px auto 0; /* Center the table and add margin from top */
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .analytic-quiz-table th {
+    background-color: #5076FF; 
+    color: white;
+    padding: 12px 15px;
+    border: none;
+    text-align: center;
+  }
+  
+  .analytic-quiz-table th:first-child {
+    border-top-left-radius: 10px; /* Rounded top-left corner */
+  }
+  
+  .analytic-quiz-table th:last-child {
+    border-top-right-radius: 10px; /* Rounded top-right corner */
+  }
+  
+  .analytic-quiz-table td {
+    padding: 12px 15px;
+    border: none;
+ 
+  }
+  
+  /* Apply border-radius to cells in even rows */
+  .analytic-quiz-table tr:nth-child(even) td {
+    background-color: #B3C4FF; /* Light blue background */
+    /* border-radius: 10px; Rounded corners */
+  }
+  
+  /* Ensure the corners are rounded for even rows */
+  .analytic-quiz-table tr:nth-child(even):first-child td:first-child {
+    border-top-left-radius: 10px; /* Rounded top-left corner for first cell in even rows */
+  }
+  
+  .analytic-quiz-table tr:nth-child(even):first-child td:last-child {
+    border-top-right-radius: 10px; /* Rounded top-right corner for last cell in even rows */
+  }
+  
+  .analytic-quiz-table tr:nth-child(even):last-child td:first-child {
+    border-bottom-left-radius: 10px; /* Rounded bottom-left corner for first cell in last even row */
+  }
+  
+  .analytic-quiz-table tr:nth-child(even):last-child td:last-child {
+    border-bottom-right-radius: 10px; /* Rounded bottom-right corner for last cell in last even row */
+  }
+  
+  .analytic-quiz-table tr:nth-child(odd) {
+    background-color: transparent; /* Transparent background for odd rows */
+  }
+  
+  .icons-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .edit-icon {
+    cursor: pointer;
+    color: #854CFF;
+  }
+  
+  .share-icon {
+    cursor: pointer;
+    color: #60B84B;
+  }
+  
+  .delete-icon {
+    cursor: pointer;
+    color: #D60000;
+  }
+  
+  .analysis-link {
+    color: black;
+    text-decoration: underline;
+  }
+  
