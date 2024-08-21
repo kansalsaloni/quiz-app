@@ -10,7 +10,16 @@ const AnalyticsTable = () => {
     () => [
       { quizName: 'Quiz 1', createdOn: '2024-08-01', impressions: 120 },
       { quizName: 'Quiz 2', createdOn: '2024-08-05', impressions: 150 },
-      { quizName: 'Quiz 3', createdOn: '2024-08-10', impressions: 200 },    ],
+      { quizName: 'Quiz 3', createdOn: '2024-08-10', impressions: 200 }, 
+      { quizName: 'Quiz 1', createdOn: '2024-08-01', impressions: 120 },
+      { quizName: 'Quiz 2', createdOn: '2024-08-05', impressions: 150 },
+      { quizName: 'Quiz 3', createdOn: '2024-08-10', impressions: 200 },  
+      { quizName: 'Quiz 1', createdOn: '2024-08-01', impressions: 120 },
+      { quizName: 'Quiz 2', createdOn: '2024-08-05', impressions: 150 },
+      { quizName: 'Quiz 3', createdOn: '2024-08-10', impressions: 200 },  
+      { quizName: 'Quiz 1', createdOn: '2024-08-01', impressions: 120 },
+      { quizName: 'Quiz 2', createdOn: '2024-08-05', impressions: 150 },
+      { quizName: 'Quiz 3', createdOn: '2024-08-10', impressions: 200 },     ],
     []
   );
 
