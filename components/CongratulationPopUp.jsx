@@ -4,7 +4,7 @@ import '../style/LiveQuizStyle.css';
 import congratulationImage from '../assets/congratulation.png';
 function CongratulationPopUp() {
   return (
-    <div className='center-container' style={{backgroundColor:'#041325'}}>
+    <div className='center-container'  id='popup-center-container'>
     <div className='popup-container'>
       <div className='container'>
         <h1>Congrats Quiz is Completed</h1>

@@ -1,5 +1,32 @@
 .right-screen{
-    background-color: red;
-    width: calc(100% - 150px);
+    background-color: #EDEDED;
+    width: calc(100% - 200px);
     height:100vh;
 }
+.home-container {
+    display: flex;
+    height: 100vh;
+}
+.dashboard-container{
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 75px;
+    padding-bottom: 30px;
+   height: 100%;
+   box-sizing: border-box;
+}
+.dashboard-top-container{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    justify-content: center;
+ 
+}
+.trending-quiz-list{
+    display: flex;
+    flex-wrap: wrap; /* Allows the items to wrap to the next line */
+    gap: 15px;
+    padding: 0;
+}
+  
