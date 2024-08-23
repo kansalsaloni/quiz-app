@@ -3,30 +3,8 @@ import '../style/CreateQuizStyle.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import QuizTimer from './QuizTimer';
 
-function QuizOptionField({placeholder,id,classname,showTwoInputField,showTimer}) {
-  const [options, setOptions] = useState(['', '', '', '']);
+function QuizOptionField({placeholder,id,classname,showTwoInputField,showTimer,options,addOption,removeOption,handleOptionChange,setTimer}) {
   const [selectedOption, setSelectedOption] = useState();
-
-  const handleOptionChange = (index, value) => {
-    const newOptions = [...options];
-    newOptions[index] = value;
-    setOptions(newOptions);
-  };
-
-  const addOption = () => {
-    if (options.length < 6) {
-      setOptions([...options, '']);
-    }
-  };
-
-  const removeOption = (index) => {
-    const newOptions = options.filter((_, i) => i !== index); // Remove option at index
-    setOptions(newOptions);
-    if (selectedOption === options[index]) {
-      setSelectedOption(''); // Clear selected option if removed
-    }
-  };
-
   const handleOptionSelect = (event) => {
     setSelectedOption(event.target.value);
   };
@@ -91,7 +69,7 @@ function QuizOptionField({placeholder,id,classname,showTwoInputField,showTimer})
         )
 }
       </div>
-{showTimer&&(     <QuizTimer />)}
+{showTimer&&(     <QuizTimer setTimer={setTimer}/>)}
  
     </div>
   );
