@@ -2,22 +2,10 @@ import React, { useEffect, useState } from 'react'
 import '../App.css';
 import '../style/LiveQuizStyle.css';
 import LiveQuizOption from '../shared/LiveQuizOption';
-function PollLiveQuiz() {
-    const [showTimer,setShowTimer]=useState("false");
-    const [timeLeft, setTimeLeft] = useState(5);
+function PollLiveQuiz({handleSubmitQuiz,setSelectedOptions}) {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [selectedOptionId, setSelectedOptionId] = useState(null);
 
-
-    useEffect(() => {
-        if (timeLeft > 0) {
-          const timerId = setInterval(() => {
-            setTimeLeft(timeLeft - 1);
-          }, 1000);
-    
-          return () => clearInterval(timerId);
-        }
-      }, [timeLeft]);
     const quizData = {    questions: [
       {
         id: 1,
@@ -52,12 +40,15 @@ function PollLiveQuiz() {
     ],
   };
   const handleNextQuestion = () => {
+    setSelectedOptions((prev) => [
+      ...prev,
+      { questionId: currentQuestion.id, selectedOptionId },
+    ]);
     if (currentQuestionIndex < quizData.questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
-      setSelectedOptionId(null); // Reset selected option
+      setSelectedOptionId(null); 
 
     } else {
-      // Handle end of quiz or show a completion message
     }
   };
   const currentQuestion = quizData.questions[currentQuestionIndex];
@@ -68,31 +59,19 @@ function PollLiveQuiz() {
        <div className='live-quiz-popup-container' >
         <div className='live-quiz-container'>
             <div className='header'>
-                <p>01/10</p>
-              {
-                showTimer &&(
-<p className='timer'>{timeLeft} s</p>
-                )
-              }
-            </div>
+            <p>{`${currentQuestion.id}/${quizData.questions.length}`}</p>            </div>
             <h2>{currentQuestion.question}</h2>
             <div className='options-button-container'>
             <LiveQuizOption options={currentQuestion.options} type={currentQuestion.type}   selectedOptionId={selectedOptionId}
             onOptionSelect={setSelectedOptionId}/>
             <button
-              onClick={handleNextQuestion}
+              onClick={isLastQuestion?handleSubmitQuiz :handleNextQuestion}
               className='button'
               style={{ backgroundColor: '#60B84B', color: 'white' }}
             >
               {isLastQuestion ? 'Submit' : 'Next'}
             </button>
           </div>
-            {/* <LiveQuizOption options={currentQuestion.options} type={currentQuestion.type} />
-            <button onClick={handleNextQuestion} className='button' style={{backgroundColor:'#60B84B', color:'white'}}>
-            {isLastQuestion ? 'Submit' : 'Next'}
-
-              </button> */}
-
         </div>
        </div>
     </div>
