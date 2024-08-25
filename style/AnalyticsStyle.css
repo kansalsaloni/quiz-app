@@ -9,3 +9,8 @@
     font-size: 50px;
     text-align: center;
 }
+@media screen and (max-width: 480px) {
+    .analytics-title{
+        font-size: 30px;
+    }
+}

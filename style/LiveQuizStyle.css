@@ -45,6 +45,7 @@
     justify-content: center;
     padding-left: 50px;
     padding-right: 50px;
+
 }
 .live-quiz-container h2{
     font-size: 30px;
@@ -126,7 +127,7 @@
     .container h1{
         font-size:30px;
         text-align: center;
-        margin: 50px;
+        /* margin: 50px; */
     }
     #popup-center-container{
         background-color: transparent;
@@ -160,5 +161,6 @@
     }
     .live-quiz-container h2{
       text-align: center;
+      margin: 0px;
     }
 } 

@@ -18,14 +18,14 @@
   }
 /* Media queries for responsiveness */
 @media screen and (max-width: 768px) {
-  #quiz-share-link-popup-container{
-height:200px;
+  #live-quiz-popup-container{
+height:150px;
   }
 
   }
   @media screen and (max-width: 480px) {
-    #quiz-share-link-popup-container{
-  height:200px;
+    #live-quiz-popup-container{
+  height:180px;
   width:200px;
     }
     #quiz-share-link-popup-title{

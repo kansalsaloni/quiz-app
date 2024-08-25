@@ -39,8 +39,8 @@ align-content: center;
   .option-image-text {
     display: flex;
     align-items: center;
-    height: 80px; /* Increased height for better visibility */
-    width: 200px; /* Full width */
+    height: 80px; 
+    width: 200px; 
   }
 
 
@@ -61,7 +61,7 @@ align-content: center;
   }
 
   .option.selected {
-    border: 1px solid blue; /* Change border color on selection */
+    border: 2px solid blue; /* Change border color on selection */
   }
   
   @media screen and (max-width: 480px) {
@@ -70,8 +70,18 @@ align-content: center;
     }
     .option{
       width:90%;
-
    } 
+   .option img{
+    width:100%;
+   }
+
+   .option-image-text {
+    width:100%;
+    height: 70px;
+   }
+   .option-image-text img{
+width:50%;
+   }
   }
   @media screen and (max-width: 768px) {
     .options-container{

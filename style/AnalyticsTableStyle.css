@@ -1,14 +1,15 @@
 .analytic-quiz-table {
     width: calc(100% - 150px); /* Adjusted width calculation */
-    border-collapse: separate; 
+    border-collapse: collapse; 
     border-spacing: 0;
     margin: 0px auto ; 
     font-size: 16px;
     text-align: center;
     font-weight: bold;
     margin-bottom: 40px;
+    position: relative; /* Ensures the table stays within its z-index layer */
+    z-index: 1;
   }
-  
   .analytic-quiz-table th {
     background-color: #5076FF; 
     color: white;
@@ -82,4 +83,17 @@
     color: black;
     text-decoration: underline;
   }
-  
+  @media screen and (max-width: 480px) {
+    .analytic-quiz-table {
+      font-size: 10px;
+
+    }
+    .analytic-quiz-table th {
+      padding:10px;
+    }
+    .analytic-quiz-table td {
+      padding: 10px;
+      border: none;
+   
+    }
+  }

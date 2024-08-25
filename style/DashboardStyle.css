@@ -2,6 +2,9 @@
     background-color: #EDEDED;
     width: calc(100% - 200px);
     height:100vh;
+    box-sizing: border-box;
+    overflow-y: auto;
+
 }
 .home-container {
     display: flex;
@@ -10,23 +13,70 @@
 .dashboard-container{
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
-    padding: 75px;
-    padding-bottom: 30px;
-   height: 100%;
-   box-sizing: border-box;
-}
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-top: 75px;
+    }
 .dashboard-top-container{
     display: flex;
     flex-direction: row;
+    justify-content:space-between ;
     gap:20px;
-    justify-content: center;
- 
+    /* flex-wrap: wrap; */
 }
 .trending-quiz-list{
     display: flex;
-    flex-wrap: wrap; /* Allows the items to wrap to the next line */
+    flex-wrap: wrap; 
     gap: 15px;
-    padding: 0;
+    padding-bottom: 30px;
+}
+.hamburger-icon{
+    padding: 20px 0px 0px 75px;
+    font-size: 20px;
+    display: none;
+}
+.dashboard-container h4{
+    text-align: left;   
+   }  
+@media screen and (max-width: 800px){
+    .right-screen{
+        width: 100%;
+
+    }
+    .dashboard-top-container{
+        flex-wrap: wrap;
+     justify-content: center;  
+      
+    }
+    .trending-quiz-list{
+        gap: 5px;
+    }
+    .hamburger-icon{
+        display: block;
+    }
+}
+@media screen and (max-width: 480px) {
+    .dashboard-top-container{
+        justify-content: center;   
+        flex-wrap: wrap;
+
+       }
+       .hamburger-icon{
+        display: block;
+    }
+    .trending-quiz-list{
+justify-content: center;
+gap:20px;
+    }
+    .dashboard-container{
+        padding:30px;
+    }
+    .dashboard-container h4{
+        text-align: center;   
+       }  
+       .hamburger-icon{
+        padding: 20px 0px 0px 50px;
+        font-size: 20px;
+    }
 }
   
